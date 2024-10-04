@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 선택자를 이용한 선택</title>
+</head>
+<body>
+  <!-- 돔트리가 여러 개면 불편하기 때문에 div 태그로 감싸서 하나로 만들기-->
+  <div> 
+    <h1 id="title">CSS 선택자를 이용한 선택</h1>
+    <p class="sub-title">첫 번째 단락이에요!</p>
+    <ul>
+      <li class="odd">치킨</li> <!-- 치킨 = 값으로 볼 것 -->
+      <li class="even">피자</li>
+      <li class="odd">맨밥</li>
+      <li class="even">순대</li>
+      <li class="odd">라면</li>
+    </ul>
+  </div>
+</body>
+<script>
+  NodeList.prototype.filter = Array.prototype.filter;
+  // const title = document.querySelector("#title"); // 선택자 가져오기
+  const list = document.querySelectorAll("li"); // All 태그 이름 => 해당 태그 전체 가져오기
+  // list.forEach((li) => { // "맨밥"만 불러오기
+  //   if(li.innerText === "맨밥"){ console.log(li) }
+  // }) 
+
+  // fliter()
+  // li태그에 "치킨"이 포함되어 있다면 글자색을 빨간색으로 변경
+  // 문자열 값 비교는 ""==="" 대신 includes 사용
+  list.filter((li) => li.innerText.includes("치킨")).forEach((li) => { // [치킨].forEach(li)
+    li.style.color = "red";
+    li.innerText = "후라이드치킨"
+  }) 
+  
+  // 대괄호 접근법으로 styles 정의 후 아래 스타일을 적용
+  // 1) 홀수(odd)의 글자 크기는 22px로
+  // 짝수(even)의 글자 크기는 14px로 변경하기
+  const styles = {
+    odd : "22px",
+    even : "14px"
+  }
+
+  list.forEach((li) => {
+    // li.classList[0]
+    // li.style.fontSize = styles[li.classList[0]];
+    li.style.fontSize = li.classList[0].includes("odd") ? "22px" : "14px";
+  })
+</script>
+</html>

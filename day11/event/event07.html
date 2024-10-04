@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>체크박스 동의</title>
+</head>
+<body>
+  <form action="" name="myForm">
+    <div>
+      <label>전체 동의
+        <input type="checkbox" name="all">
+      </label>
+    </div>
+    <div>
+      <label>서비스 이용약관 동의
+        <input type="checkbox" name="term">
+      </label>
+    </div>
+    <div>
+      <label>광고 수신 동의
+        <input type="checkbox" name="term">
+      </label>
+    </div>
+    <div>
+      <label>개인 정보 이용약관 동의
+        <input type="checkbox" name="term">
+      </label>
+    </div>
+  </form>
+</body>
+<script>
+  // 전체 동의를 완성하라!😎
+  // 30분
+
+  const checkboxs = document.querySelectorAll("checkbox")
+  const all = document.querySelector("input[name='all']")
+  // console.log(all)
+  const terms = document.querySelector("input[name='term']")
+  // console.log(terms)
+
+  NodeList.prototype.map = Array.prototype.map
+
+  // 방법1
+  // all.addEventListener("click", (e) => {
+  //   if(all.checked){ // all이 checked 상태이면 {} 실행
+  //     terms.forEach((term) => {
+  //       term.checked = true; // all 버튼 누르면 전체 체크 표시됨
+  //     })
+  //   }else{
+  //     terms.forEach((term) => {
+  //       term.checked = false; 
+  //     })
+  //   }
+
+  // 방법2 (if문 없이)
+  all.addEventListener("click", (e) => {
+    terms.forEach((term) => {
+      term.checked = all.checked;
+    })
+  })
+
+  // 
+  terms.forEach((term) => {
+    term.addEventListener("click", (e) => { 
+      // 클릭을 할 때마다 기존에 있는 상태들이 모두 true가 됐는지, 하나라도 false가 됐는지 배열 형태로 상태 가져오기
+      all.checked = terms.map((term) => term.checked).fliter((checked) => checked).length === 3;
+    })
+  })
+
+</script>
+</html>
