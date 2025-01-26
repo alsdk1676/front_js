@@ -19,6 +19,8 @@ const animals3 = {...animals, bird : "둘기"}
 // Object.assign(target, source);
 const animals4 = Object.assign({}, animals);
 animals4.otter = "수달이"
+// 깊은 복사
+// 원본 데이터는 그대로, 새로운 데이터 추가
 
 console.log(animals)
 console.log(animals4)

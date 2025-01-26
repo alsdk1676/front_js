@@ -21,7 +21,10 @@
   HTMLCollection.prototype.forEach = Array.prototype.forEach;
   const items = document.getElementsByClassName("item")
   console.log(items);
+  console.log(items[0].className); // item odd
   // 콘솔에 item들 모두 출력
+  items.fotEach((item) => { console.log(item) })
+
   const colors = {
     even : "green",
     odd : "pink"
@@ -30,6 +33,8 @@
   // 짝수(even)는 녹색, 홀수(odd)는 핑크
   // items.forEach((item) => { item.style.color = "red" });
   items.forEach((item) => { item.style.color = colors[item.classList[1]]});
+  // items.forEach((item) => { item.style.color = colors[odd / even]}); []접근법 : key값을 통해 value값을 가져옴 => 통째로 return값
+  // items.forEach((item) => { item.style.color = pink / green}); 
 
 </script>
 </html>

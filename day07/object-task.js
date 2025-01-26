@@ -17,7 +17,7 @@
 // 포인트: 9500
 
 // 3명을 모두 마트에 등록 시킨다.
-// 마트 객체를 만들고 각 고객을 프로퍼티로 선언한다.
+// 마트 객체를 만들고 각 고객을 프로퍼티로 선언한다. (이미 값을 알고 있는 경우 프로토타입 사용이 편함)
 // 유저의 이름만 모두 출력한다.
 // 유저의 포인트를 모두 출력한다.
 
@@ -27,20 +27,24 @@ function User(name, age, point){
   this.point = point;
 }
 
-const market = new Object(); // === {}
+const market = new Object(); // Object = {}
 const user1 = new User("홍길동", 30, 3500);
 const user2 = new User("이순신", 22, 0);
 const user3 = new User("장보고", 66, 9500);
 
+console.log(user1)
+console.log(user2)
+console.log(user3)
+
+// market에 user1, 2 ,3 추가 (있으면 수정)
 market.user1 = user1;
 market.user2 = user2;
 market.user3 = user3;
 
 console.log(market)
 
-
 for(let i = 0; i < 3; i++){
-  console.log(market[`user${i+1}`].name)
+  console.log(market[`user${i+1}`].name)///
 }
 
 // 빠른 for문

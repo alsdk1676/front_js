@@ -14,11 +14,12 @@
 <script>
   const input = document.querySelector("input[name='name']");
   const p = document.querySelector("#result");
+  // console.log(input, p)
 
   // 사용자가 입력한 이름을 입력하고 엔터를 누르면
   // p태그에 실시간으로 보여주기
-  
   input.addEventListener("keydown", (e) => {
+    console.log(e)
     if(e.key == 'Enter'){
       p.innerText = e.target.value;
     }

@@ -21,8 +21,8 @@ const post = {
   name : "홍길동"
 }
 
-post.title = "와 불금엔 치킨";
-console.log(post.title);
+post.title = "와 불금엔 치킨"; // 수정
+// console.log(post.title);
 
 // const products = {
 //   product1: "지우개",
@@ -33,7 +33,7 @@ console.log(post.title);
 //   product6: "노트",
 // }
 
-// 향상된 for, 빠른 for문, for in, for of
+// 향상된 for문, 빠른 for문, for in, for of
 // for(let i in products){
 //   console.log(products[i])
 // }
@@ -64,28 +64,28 @@ console.log(post.title);
 // }
 // console.log(result);
 
-// const user1 = {name : "홍길동"};
-// const user2 = {name : "이순신"};
-// const user3 = {name : "장보고"};
-// const user4 = {name : "김철수"};
-// const user5 = {name : "김영희"};
-// const user6 = {name : "흰둥이"};
+const user1 = {name : "홍길동"};
+const user2 = {name : "이순신"};
+const user3 = {name : "장보고"};
+const user4 = {name : "김철수"};
+const user5 = {name : "김영희"};
+const user6 = {name : "흰둥이"};
 
 // 프로토타입(Prototype)
 // 객체 생성자 함수에 의해 생성되는 객체들이 공유하는 속성과 메소드를 저장하는 특수한 객체
-// function User(name, age){
-//   this.name = name;
-//   this.age = age;
-// }
+function User(name, age){
+  this.name = name;
+  this.age = age;
+}
 
-// const user7 = new User("홍길동")
-// const user8 = new User("이순신")
-// console.log(user7)
-// console.log(user8)
+const user7 = new User("홍길동")
+const user8 = new User("이순신")
+console.log(user7)
+console.log(user8)
 
-// User.prototype.hello = "안녕하세요";
-// console.log(user7.hello)
-// console.log(user8.hello)
+User.prototype.hello = "안녕하세요";
+console.log(user7.hello)
+console.log(user8.hello)
 
 
 

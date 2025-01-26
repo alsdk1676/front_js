@@ -14,6 +14,7 @@ const movie2 = {
   }
 }
 
+// movie를 받았을 때 movie 가격 출력하기
 function printMoviePrice(movie){
   console.log(movie.detail.price)
 }

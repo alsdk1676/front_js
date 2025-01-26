@@ -10,6 +10,8 @@
 
 
 // 2) 1~50까지 짝수만 배열에 담고 배열 안에 값에 3을 곱한 값으로 변경 후 출력하기
+// console.log(new Array(50).fill(0).map((data, i) => i + 1)) // 1~50 배열
+// console.log(new Array(50).fill(0).map((data, i) => i + 1).filter((data) => data % 2 == 0)) // 1~50 중 짝수 배열
 new Array(50).fill(0).map((data, i) => i + 1).filter((data) => data % 2 == 0).map((data) => data * 3).forEach((data) => {console.log(data)})
 
 

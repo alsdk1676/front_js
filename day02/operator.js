@@ -24,10 +24,10 @@
 // "/" : 나누기 연산자
 // let num3 = 50;
 // let num4 = 10;
+// console.log(num3 / num4); // 5
 
-// // console.log(num3 / num4);
-// // "%" : 나머지 연산자
-// console.log(num3 % num4);
+// "%" : 나머지 연산자
+// console.log(num3 % num4); // 0
 
 // 누적복합연산자
 // +=, -=

@@ -66,8 +66,8 @@
 // console.log(result4)
 
 
-// 5) 입력받은 문자를 뒤집어주는 함수
-// ex) "abcdefg" -> "gfedcba";
+
++
 function reverse(content){
   let result = "";
   for(let i = 0; i < content.length; i++){

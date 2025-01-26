@@ -12,7 +12,7 @@
 // const animals2 = animals;
 // animals2.camel = "낙둥이"; // animals2에 "낙둥이" 추가
 // const animals2 = {...animals, camel : "낙둥이"};
-// ...animals : animals 다 들고온후 camel 추가
+// ...animals : animals 다 들고온 후, camel 추가
 
 // console.log(animals)
 // console.log(animals2)
@@ -24,6 +24,7 @@ const arr3 = [7, 8, 9];
 // let numbers = arr1 + arr2 + arr3;
 // console.log(numbers.replaceAll(",", "").split("")); // 메서드 여러 번 사용, 불편
 
+// spread 문법
 let numbers = [ ...arr1, ...arr2, ...arr3];
 console.log(numbers);
 // console.log(...arr1) // 1 2 3

@@ -1,8 +1,8 @@
-// .indexOf() : 해당 문자의 index 번호를 리턴하는 메서드
-// console.log("abcdef".indexOf("c"))
+// .indexOf() : 해당 문자의 index 번호(위치)를 리턴하는 메서드
+// console.log("abcdef".indexOf("c")) => 2
 
 // .charAt() : 해당 인덱스의 값을 리턴하는 메서드
-// console.log("abcdef".charAt(2))
+// console.log("abcdef".charAt(2)) => c
 
 // .length : 문자열의 길이
 // let srt1 = "abcd";
@@ -50,6 +50,7 @@
 //   for(let i = 0; i < num; i++){
 //     let odd = i % 2 == 1;
 //     if(odd) { console.log(i) };
+
 //     // let even = num % 2 == 0;
 //     // if(even) { continue };
 //     // console.log(i)
@@ -69,7 +70,7 @@
 // 7. 같으면 개수를 센다.
 // 8. 값을 리턴한다.
 
-// const getCountCharacterInContent = (content, char) => {
+// const getCountCharacterInContent = (content, char) => { // content : 사용자가 입력한 문자열, char : 문자 한 개
 //   let count = 0;
 //   for(let i = 0; i < content.length; i++){ // content의 길이(content.lenght=3)만큼 반복 돌리기
 //     if(content.charAt(i) == char){

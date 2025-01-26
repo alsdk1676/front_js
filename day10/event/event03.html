@@ -36,15 +36,21 @@
     id.style.border = "solid 1px orange"
   })
 
-  id.addEventListener("blur", (e) => { // e가 없으면 아이디를 입력하세요 문구 안뜸
+  id.addEventListener("blur", (e) => { 
+    // 매개변수 e가 없으면 "아이디를 입력하세요" 문구 안뜸
+    // e : blur를 통해 나온 결과
+    // focus를 나가는 순간 blur 이벤트가 발생
+    // console.log(e.target.value)
+    // e.target = input
     id.style.border = ""
+    // e.target 변수에 담아주기
     const target = e.target;
     if(!target.value){
       idResult.innerText = "아이디를 입력하세요.";
       idResult.style.color = "red";
-      return;
+      return; // 함수 종료
     }
-    idResult.innerText = "멋진 아이디네요";
+    idResult.innerText = "멋진 아이디네요😄";
     idResult.style.color = "blue";
     globalThis.flag[0] = true;
   })
@@ -53,7 +59,7 @@
     password.style.border = "solid 1px orange"
   })
   
-  id.addEventListener("blur", (e) => {
+  password.addEventListener("blur", (e) => {
     password.style.border = ""
     const target = e.target;
     if(!target.value){
@@ -61,12 +67,17 @@
       passwordResult.style.color = "red";
       return;
     }
-    passwordResult.innerText = "검증 완료";
+    passwordResult.innerText = "검증 완료!";
     passwordResult.style.color = "blue";
     globalThis.flag[1] = true;
   })
 
+  // form태그 => 완료 button 누르면 submit으로 데이터 보내기
   button.addEventListener("click", () => {
+    // focus가 되지 않으면 blur도 되지 않음 => 아무런 데이터 입력되지X
+    // 아무것도 입력안하고 데이터 보내기 방지
+    // globalThis에서 걸러내기
+    // globalThis = [false, false] => 빈배열 => 빈배열 길이 = 0
     if(globalThis.flag.filter(check => check).length != 2){
       alert("정보를 입력하세요!")
       return;

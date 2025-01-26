@@ -9,7 +9,7 @@
   
 </body>
 <script>
-  
+  // prompt()
   // console.log(prompt()); // 사용자에게 값을 받기 위한 함수
   // 사용자에게 정수를 입력 받아서
   // 짝수라면 "짝수입니다.", 홀수라면 "홀수입니다."를
@@ -17,11 +17,12 @@
   // 단, 삼항연산자, 변수를 이용하여 결과를 출력한다.
 
   let input = prompt();
+  // console.log(input);
   let even = input % 2 == 0;
   let result = even ? "짝수입니다" : "홀수입니다.";
   // document.write("<h1>" + result + "</h1>");
   
-  // 탬플릿 리터널 `${변수명}`
+  // 템플릿 리터널 `${변수명}`
   document.write(`<h1>${result}</h1>`);
 
 </script>

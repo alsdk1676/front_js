@@ -26,7 +26,7 @@ const getOddEven = (num1) => {
   return result;
 }
 
-let result =getOddEven(11);
+let result = getOddEven(11);
 console.log(result)
 
 // 3) 0, 1을 마구잡이로 5개 전달했을 때

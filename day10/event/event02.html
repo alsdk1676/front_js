@@ -15,11 +15,14 @@
   </form>
 </body>
 <script>
+
+  // DOM 5개 들고오기기
   const button = document.querySelector("button");
   const id = document.querySelector("input[name='id']");
   const password = document.querySelector("input[name='password']");
   const idResult = document.querySelector("#id-result");
   const passwordResult = document.querySelector("#password-result");
+  // console.log(button, id, password, idResult, passwordResult)
 
   // 아이디와 비밀번호 유효성 검사
   // 빈 값 검사
@@ -27,9 +30,12 @@
   // 버튼을 누르면 이벤트 리스너를 사용해서 클릭에 반응하게 한다.
   button.addEventListener("click", () => {
     // 유효성 검사를 한다.
-    // id랑 password가 값이 있는지 없는지를 검사해야한다.
-    // id, password의 값을 들고 온다.
+    // id랑 password의 값이 있는지 없는지를 검사해야한다.
+    // => id, password의 값을 들고 온다.
     console.log(id.value, password.value)
+    console.log(idResult, passwordResult)
+    // 값이 있으면 무조건 true이기 때문에
+    // 값이 없을 경우를 먼저 처리함
     if(!id.value){
       idResult.innerText = "아이디를 입력하세요."
       idResult.style.color = "red"

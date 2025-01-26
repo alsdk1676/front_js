@@ -15,7 +15,7 @@
 // 1부터 10까지 출력
 for(let i = 0; i < 10; i++){
   console.log(i+1);
-  if(i == 5){ break; }
+  if(i == 5){ break; } // 6까지만 출력
 }
 
 for(let i = 0; i < 10; i++){

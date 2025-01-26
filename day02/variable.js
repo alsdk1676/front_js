@@ -20,7 +20,7 @@
 
 // var data4;
 // console.log(data4);
-// console.log(typeof(data4));
+// console.log(typeof(data4)); => undefined
 
 // ---------------------------------------------------------------------------------------------------------
 // var의 문제점
@@ -30,8 +30,8 @@
 // data1 = 10;
 // var data1;
 
-// let data2;
 // data2 = 20;
+// let data2;
 
 // console.log(data2)
 

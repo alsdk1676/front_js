@@ -1,4 +1,5 @@
 // 두 수를 더해서 출력하기
+// 더하기 함수 1개, 출력 함수 1개 => 함수 총 2개 필요
 // const add = (num1, num2, callback) => {
 //   callback(num1 + num2);
 // }
@@ -94,7 +95,7 @@ const print = (result) => {
 }
 
 // 곱하기 함수 먼저 실행 (익명 함수)
-// result(매개변수 - num1 * num2) 자리에서 함수를 받을 준비
+// result(매개변수 = num1 * num2) 자리에서 함수를 받을 준비
 // multiply(1, 2, function(result){
 //   multipleBy2(result, (result) => {
 //     console.log(result)

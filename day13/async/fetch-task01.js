@@ -4,7 +4,7 @@
 
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
-  // .then((result) => console.log(result))
+  .then((result) => console.log(result))
   .then((result) => result.map(({name}) => name))
   // .then((result) => result.map((user) => user.name)) // 기존 값을 반복 돌려서 바꾸기
   .then((names) => console.log(names))
